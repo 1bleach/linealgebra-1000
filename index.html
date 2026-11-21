@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>真题题库 · 五套刷题合集</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="真题题库">
+<meta name="theme-color" content="#0b1020">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" href="icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{
+  --bg:#0b1020; --bg2:#131a33; --card:#171f3d; --card2:#1d274a;
+  --line:rgba(140,170,255,.16);
+  --txt:#e8eefc; --dim:#93a3c9; --accent:#5ec8f6; --accent2:#8b9cff;
+}
+html,body{min-height:100%}
+body{
+  background:radial-gradient(1200px 700px at 20% -10%, #1b2a52 0%, transparent 60%),
+             radial-gradient(900px 600px at 100% 0%, #182b4d 0%, transparent 55%),
+             linear-gradient(180deg, var(--bg) 0%, #0a0f1e 100%);
+  background-attachment:fixed;
+  color:var(--txt);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro SC","PingFang SC","Helvetica Neue","Microsoft YaHei",sans-serif;
+  padding:calc(env(safe-area-inset-top) + 28px) 20px calc(env(safe-area-inset-bottom) + 34px);
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:980px;margin:0 auto}
+header{text-align:center;margin-bottom:30px}
+.brand{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:13px;letter-spacing:.18em;color:var(--accent);
+  padding:6px 14px;border:1px solid rgba(94,200,246,.28);border-radius:999px;
+  background:rgba(94,200,246,.07);
+}
+h1{
+  font-size:clamp(26px,5.4vw,40px);font-weight:700;letter-spacing:.02em;
+  margin:16px 0 10px;
+  background:linear-gradient(100deg,#ffffff 10%,#9ec9ff 55%,#7c9cff 100%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+.sub{color:var(--dim);font-size:14.5px;line-height:1.7}
+.grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:26px}
+@media (min-width:760px){.grid{grid-template-columns:1fr 1fr}}
+.card{
+  position:relative;display:block;text-decoration:none;color:inherit;
+  background:linear-gradient(160deg,var(--card) 0%,var(--card2) 100%);
+  border:1px solid var(--line);border-radius:20px;
+  padding:20px 20px 18px;
+  transition:transform .16s ease, border-color .16s ease, box-shadow .16s ease;
+  overflow:hidden;
+}
+.card::after{
+  content:"";position:absolute;inset:0;border-radius:20px;pointer-events:none;
+  background:radial-gradient(420px 160px at 85% 0%,rgba(94,200,246,.13),transparent 70%);
+  opacity:.85;
+}
+.card:active{transform:scale(.975);border-color:rgba(94,200,246,.55)}
+.card:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.top{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.num{
+  flex:0 0 auto;width:38px;height:38px;border-radius:12px;
+  display:grid;place-items:center;font-weight:700;font-size:16px;
+  color:#08111f;background:linear-gradient(135deg,#5ec8f6,#8b9cff);
+  box-shadow:0 6px 18px rgba(94,200,246,.28);
+}
+.name{font-size:18.5px;font-weight:650;letter-spacing:.01em}
+.tag{color:var(--dim);font-size:12.5px;margin-top:3px}
+.desc{color:#b9c6e4;font-size:13.5px;line-height:1.65;margin-bottom:14px}
+.meta{display:flex;flex-wrap:wrap;gap:7px}
+.pill{
+  font-size:11.5px;color:#a9c3ea;padding:4px 9px;border-radius:999px;
+  background:rgba(140,170,255,.1);border:1px solid rgba(140,170,255,.14);
+}
+.go{
+  margin-top:15px;display:flex;align-items:center;justify-content:space-between;
+  font-size:13.5px;color:var(--accent);font-weight:600;
+}
+.arrow{transition:transform .16s ease}
+.card:active .arrow{transform:translateX(3px)}
+.note{
+  margin-top:26px;padding:16px 18px;border-radius:16px;
+  background:rgba(140,170,255,.06);border:1px dashed rgba(140,170,255,.2);
+  color:var(--dim);font-size:12.8px;line-height:1.75;
+}
+.note b{color:#c9d8f7;font-weight:600}
+footer{text-align:center;color:#5d6c92;font-size:12px;margin-top:26px;line-height:1.8}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">真题题库 · ONLINE</div>
+    <h1>五套刷题合集</h1>
+    <p class="sub">纯前端离线题库，进度、错题、收藏自动存在本机</p>
+  </header>
+
+  <div class="grid">
+
+    <a class="card" href="gongke/">
+      <div class="top">
+        <div class="num">01</div>
+        <div>
+          <div class="name">工科数学分析</div>
+          <div class="tag">考研数一 / 数二真题 + 自编</div>
+        </div>
+      </div>
+      <div class="desc">1987 年起的数一、数二真题重排为十大模块，从极限到级数一条线刷到底，每题配答案与解析。</div>
+      <div class="meta">
+        <span class="pill">1000 题</span><span class="pill">十模块</span><span class="pill">选择 · 填空 · 计算 · 证明</span>
+      </div>
+      <div class="go"><span>开始刷题</span><span class="arrow">›</span></div>
+    </a>
+
+    <a class="card" href="linear/">
+      <div class="top">
+        <div class="num">02</div>
+        <div>
+          <div class="name">线性代数</div>
+          <div class="tag">考研与期末通用</div>
+        </div>
+      </div>
+      <div class="desc">行列式到二次型十章各一百题，计算与证明分开练，难点章节星级标注，适合按章推进。</div>
+      <div class="meta">
+        <span class="pill">1000 题</span><span class="pill">10 章 × 100</span><span class="pill">计算 587 / 证明 413</span>
+      </div>
+      <div class="go"><span>开始刷题</span><span class="arrow">›</span></div>
+    </a>
+
+    <a class="card" href="physics/">
+      <div class="top">
+        <div class="num">03</div>
+        <div>
+          <div class="name">大学物理</div>
+          <div class="tag">考试真题 1000 题</div>
+        </div>
+      </div>
+      <div class="desc">力学到近代物理共二十章，七成选择三成计算，覆盖期末与考研初试常见考法。</div>
+      <div class="meta">
+        <span class="pill">1000 题</span><span class="pill">20 章</span><span class="pill">选择 700 / 计算 300</span>
+      </div>
+      <div class="go"><span>开始刷题</span><span class="arrow">›</span></div>
+    </a>
+
+    <a class="card" href="cmc/">
+      <div class="top">
+        <div class="num">04</div>
+        <div>
+          <div class="name">全国大学生数学竞赛</div>
+          <div class="tag">CMC 第 1–17 届</div>
+        </div>
+      </div>
+      <div class="desc">数学 A/B 类、非数学类、低年级与高年级，初赛决赛与补赛齐全，按试卷与题目两种方式翻阅。</div>
+      <div class="meta">
+        <span class="pill">633 题</span><span class="pill">69 份试卷</span><span class="pill">含解答</span>
+      </div>
+      <div class="go"><span>开始刷题</span><span class="arrow">›</span></div>
+    </a>
+
+    <a class="card" href="cpho/">
+      <div class="top">
+        <div class="num">05</div>
+        <div>
+          <div class="name">全国中学生物理竞赛</div>
+          <div class="tag">CPhO 第 1–43 届</div>
+        </div>
+      </div>
+      <div class="desc">预赛复赛决赛全收录，含官方答案卷，题干与解答分栏对照，适合按年份整套练。</div>
+      <div class="meta">
+        <span class="pill">1009 题</span><span class="pill">43 届</span><span class="pill">148 份试卷</span>
+      </div>
+      <div class="go"><span>开始刷题</span><span class="arrow">›</span></div>
+    </a>
+
+  </div>
+
+  <div class="note">
+    <b>iPad 用法：</b>点 Safari 底部的分享按钮，选「添加到主屏幕」，之后从桌面直接打开，全屏无地址栏。<br>
+    <b>数据说明：</b>所有题库与 KaTeX 字体已内嵌在页面里，断网也能用；做题记录只保存在这台设备，清理 Safari 数据会一并清空。
+  </div>
+
+  <footer>纯静态页面 · 无账号 · 无广告 · 无网络请求</footer>
+</div>
+</body>
+</html>

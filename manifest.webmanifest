@@ -1,0 +1,16 @@
+{
+  "name": "真题题库 · 五套刷题合集",
+  "short_name": "真题题库",
+  "description": "工科数学分析、线性代数、大学物理、大学生数学竞赛、中学生物理竞赛五套真题",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b1020",
+  "theme_color": "#0b1020",
+  "orientation": "any",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-180.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>线性代数 · 1000 道最难真题精练</title>
+<link rel="stylesheet" href="vendor/katex.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- ============ 左侧栏 ============ -->
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="logo">A</div>
+      <div class="brand-text">
+        <h1>线性代数</h1>
+        <p>1000 道最难真题 · 配答案与解析</p>
+      </div>
+    </div>
+
+    <div class="progress-box">
+      <div class="progress-row">
+        <span>总进度</span><b id="progText">0 / 1000</b>
+      </div>
+      <div class="bar"><i id="progBar"></i></div>
+      <div class="stat-row">
+        <div class="stat"><b id="statDone">0</b><span>已做</span></div>
+        <div class="stat"><b id="statRight">0</b><span>做对</span></div>
+        <div class="stat"><b id="statWrong">0</b><span>错题</span></div>
+        <div class="stat"><b id="statStar">0</b><span>收藏</span></div>
+      </div>
+    </div>
+
+    <div class="side-title">章节导航</div>
+    <nav class="chapters" id="chapters"></nav>
+
+    <div class="side-title">模式</div>
+    <div class="modes" id="modes">
+      <button class="mode active" data-mode="all">全部题目</button>
+      <button class="mode" data-mode="random">随机抽题</button>
+      <button class="mode" data-mode="wrong">只刷错题</button>
+      <button class="mode" data-mode="star">只刷收藏</button>
+    </div>
+
+    <div class="side-title">筛选</div>
+    <div class="filters">
+      <select id="diffFilter">
+        <option value="0">全部难度</option>
+        <option value="5">★★★★★ 极难</option>
+        <option value="4">★★★★ 难</option>
+        <option value="3">★★★ 较难</option>
+      </select>
+      <select id="typeFilter">
+        <option value="">全部题型</option>
+        <option value="计算">计算题</option>
+        <option value="证明">证明题</option>
+      </select>
+      <input type="search" id="searchBox" placeholder="搜索题干关键词…">
+    </div>
+
+    <div class="side-foot">
+      <button id="themeBtn" class="ghost">切换主题</button>
+      <button id="resetBtn" class="ghost danger">清空记录</button>
+    </div>
+  </aside>
+
+  <!-- ============ 主区 ============ -->
+  <main class="main">
+    <header class="topbar">
+      <button class="icon-btn" id="menuBtn" title="目录">☰</button>
+      <div class="crumb" id="crumb">全部题目</div>
+      <div class="top-right">
+        <span class="timer" id="timer">00:00</span>
+        <span class="pos" id="pos">1 / 1000</span>
+      </div>
+    </header>
+
+    <section class="card" id="card">
+      <div class="qhead">
+        <span class="badge ch" id="qCh">第一章</span>
+        <span class="badge type" id="qType">计算</span>
+        <span class="badge diff" id="qDiff">★★★★</span>
+        <span class="badge idx" id="qIdx">#1</span>
+        <button class="star-btn" id="starBtn" title="收藏">☆</button>
+      </div>
+
+      <div class="qbody" id="qBody"></div>
+
+      <div class="actions">
+        <button class="btn primary" id="showAnswerBtn">显示答案 (空格)</button>
+        <button class="btn" id="showSolBtn">显示解析</button>
+        <div class="spacer"></div>
+        <button class="btn ok" id="rightBtn">✓ 做对了 (1)</button>
+        <button class="btn no" id="wrongBtn">✗ 没做对 (2)</button>
+      </div>
+
+      <div class="answer-block hidden" id="answerBlock">
+        <div class="block-title">参考答案</div>
+        <div class="block-body" id="answerBody"></div>
+      </div>
+
+      <div class="solution-block hidden" id="solBlock">
+        <div class="block-title">详细解析</div>
+        <div class="block-body" id="solBody"></div>
+      </div>
+    </section>
+
+    <footer class="pager">
+      <button class="btn" id="prevBtn">← 上一题</button>
+      <div class="dots" id="dots"></div>
+      <button class="btn" id="nextBtn">下一题 →</button>
+    </footer>
+  </main>
+
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+<script src="vendor/katex.min.js"></script>
+<script src="data/ch01.js"></script>
+<script src="data/ch02.js"></script>
+<script src="data/ch03.js"></script>
+<script src="data/ch04.js"></script>
+<script src="data/ch05.js"></script>
+<script src="data/ch06.js"></script>
+<script src="data/ch07.js"></script>
+<script src="data/ch08.js"></script>
+<script src="data/ch09.js"></script>
+<script src="data/ch10.js"></script>
+<script src="data/ch01b.js"></script>
+<script src="data/ch02b.js"></script>
+<script src="data/ch03b.js"></script>
+<script src="data/ch04b.js"></script>
+<script src="data/ch05b.js"></script>
+<script src="data/ch06b.js"></script>
+<script src="data/ch07b.js"></script>
+<script src="data/ch08b.js"></script>
+<script src="data/ch09b.js"></script>
+<script src="data/ch10b.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
